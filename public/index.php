@@ -14,7 +14,7 @@ if (count($ar))echo "<script> window.location='index.html'; </script>"; else
     echo "<script> window.location='login.php?er=1';</script>";
 }
 ?>
-
+qqqqqqqqqqqqq
 //
 //foreach ($ar as $item)
 //{
