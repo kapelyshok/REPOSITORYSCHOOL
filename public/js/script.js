@@ -19,3 +19,5 @@ button.onclick = function (e) {
         }
     });
 }
+
+console.log("PEREMOGA");
