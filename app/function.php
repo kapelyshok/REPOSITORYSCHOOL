@@ -29,6 +29,5 @@ function check($login){
     $query="SELECT * from users WHERE name='".$login."'";
     $link=connect();
     $ar = $link->query($query)->fetchAll(2);
-
     return count($ar);
 }

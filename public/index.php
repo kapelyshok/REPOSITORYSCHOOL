@@ -6,14 +6,25 @@ $pas=$_POST['pas'];
 
 $link=connect();
 dd($link);
-$query="SELECT * from users WHERE name='".$login."'and password='".$pas."'";
+//$query="SELECT * from users WHERE name='".$login."'and password='".$pas."'";
+$query="SELECT * from users WHERE name='".$login."'";
 
 $ar = $link->query($query)->fetchAll(2);
-if (count($ar))echo "<script> window.location='index.html'; </script>"; else
+
+if (count($ar)) {
+    $query="SELECT * from users WHERE name='".$login."'and password='".$pas."'";dd($ar,23);
+    $ar = $link->query($querry)->fetchAll(2);
+    if($ar) echo "<script> window.location='CHAT.php'; </script>";else
+        echo "<script> window.location='login.php?er=1';</script>";
+}
+ else
 {
-    echo "<script> window.location='login.php?er=1';</script>";
+    $query="INSERT INTO users (`id`, `name`, `password`, `active`) VALUES (NULL,'".$login."','".$pas."',NULL);";
+    $link->query($query);
+    echo "<script> window.location='CHAT.php';</script>";
 }
 ?>
+INSERT INTO `users` (`id`, `name`, `password`, `active`) VALUES (NULL, 'user3', 'pas3', NULL);
 qqqqqqqqqqqqq
 //
 //foreach ($ar as $item)

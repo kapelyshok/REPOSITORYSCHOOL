@@ -20,5 +20,3 @@ button.onclick = function (e) {
     });
 }
 
-console.log("PEREMOGA");
-console.log("PEREMOGA");

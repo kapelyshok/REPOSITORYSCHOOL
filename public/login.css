@@ -7,6 +7,13 @@
     height:100%;
     align-items: center;
     justify-content: center;
+    border: 1px solid red;
+}
+#central2{
+    display: flex;
+    position:absolute;width: 40%;height: 40%;border: 1px solid red;
+    align-items: center;
+    justify-content: center;
 }
 body{
     overflow: hidden;
@@ -27,6 +34,6 @@ body{
 #btn:hover {
     background: darkgreen;
 }
-#around_form{
-    border: 1px solid red;
+#submit{
+
 }
